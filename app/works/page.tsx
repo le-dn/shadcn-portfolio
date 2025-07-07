@@ -38,6 +38,41 @@ const fetchWorks = async () => {
       title: "Project Eight",
       description: "Description of project eight",
     },
+    {
+      id: 9,
+      title: "Project Nine",
+      description: "Description of project nine",
+    },
+    {
+      id: 10,
+      title: "Project Ten",
+      description: "Description of project ten",
+    },
+    {
+      id: 11,
+      title: "Project Eleven",
+      description: "Description of project eleven",
+    },
+    {
+      id: 12,
+      title: "Project Twelve",
+      description: "Description of project twelve",
+    },
+    {
+      id: 13,
+      title: "Project Thirteen",
+      description: "Description of project thirteen",
+    },
+    {
+      id: 14,
+      title: "Project Fourteen",
+      description: "Description of project fourteen",
+    },
+    {
+      id: 15,
+      title: "Project Fifteen",
+      description: "Description of project fifteen",
+    },
   ]
 }
 
