@@ -1,11 +1,13 @@
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 
 const fetchWorks = async () => {
   // Simulate fetching works data from an API or database
@@ -78,7 +80,7 @@ const fetchWorks = async () => {
 
 export default async function WorksPage() {
   const works = await fetchWorks()
-  const url = "https://random.imagecdn.app/200/200"
+  const url = "https://random.imagecdn.app/500/500"
   return (
     <section className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold">Works Page</h1>
@@ -93,7 +95,11 @@ export default async function WorksPage() {
         <h2 className="text-2xl font-semibold">Our Works</h2>
         <div className="flex flex-wrap -mx-2 mt-4">
           {works.map((work) => (
-            <div key={work.id} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+            <Link
+              key={work.id}
+              href={`/works/${work.id}`}
+              className="w-full sm:w-1/2 lg:w-1/3 p-2"
+            >
               <Card>
                 <CardHeader>
                   <CardTitle>{work.title}</CardTitle>
@@ -103,13 +109,13 @@ export default async function WorksPage() {
                   <Image
                     src={url}
                     alt={work.title}
-                    width={192}
-                    height={192}
-                    className="w-48 h-48 object-cover rounded"
+                    width={500}
+                    height={500}
+                    className="object-cover rounded"
                   />
                 </CardContent>
               </Card>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
