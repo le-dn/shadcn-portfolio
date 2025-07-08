@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-muted-foreground">
                 &copy; {new Date().getFullYear()}{" "}
                 <Link href="/" target="_blank">
-                  Shadcn UI Blocks
+                  Shadcn Portfolio
                 </Link>
                 . All rights reserved.
               </span>
