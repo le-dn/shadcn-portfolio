@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 export default async function WorkPage({ params }: { params: { id: string } }) {
-  const { id } = await params
+  const { id } = params
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold">Work {params.id}</h1>
