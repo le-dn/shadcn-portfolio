@@ -1,5 +1,6 @@
 export const Logo = () => (
   <svg
+    role="img"
     id="logo-7"
     width="124"
     height="32"
@@ -16,4 +17,4 @@ export const Logo = () => (
       className="fill-foreground"
     />
   </svg>
-);
+)
