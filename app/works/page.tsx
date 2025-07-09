@@ -92,25 +92,23 @@ export default async function WorksPage() {
       </p>
       <div className="mt-6">
         <h2 className="text-2xl font-semibold">Our Works</h2>
-        <div className="flex flex-wrap -mx-2 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           {works.map((work) => (
-            <Link
-              key={work.id}
-              href={`/works/${work.id}`}
-              className="w-full sm:w-1/2 lg:w-1/3 p-2"
-            >
-              <Card>
-                <CardHeader>
+            <Link key={work.id} href={`/works/${work.id}`} className="block">
+              <Card className="h-full flex flex-col">
+                <CardHeader className="flex-none">
                   <CardTitle>{work.title}</CardTitle>
-                  <CardDescription>{work.description}</CardDescription>
+                  <CardDescription className="min-h-[2.5rem] line-clamp-2">
+                    {work.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <Image
                     src={url}
                     alt={work.title}
                     width={500}
                     height={500}
-                    className="object-cover rounded"
+                    className="object-cover rounded w-full"
                   />
                 </CardContent>
               </Card>
