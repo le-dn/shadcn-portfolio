@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default async function WorkPage({ params }: { params: { id: string } }) {
   // Next.js passes params synchronously
-  const { id } = params
+  const { id } = await params
   const work = await fetchWorkById(id)
   const works = await fetchWorks()
   const idx = works.findIndex((w) => w.id === id)
